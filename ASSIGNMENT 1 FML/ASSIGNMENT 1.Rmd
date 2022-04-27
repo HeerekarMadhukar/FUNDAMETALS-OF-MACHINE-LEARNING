@@ -1,0 +1,56 @@
+---
+title: "Untitled"
+author: "Madhukar Heerekar"
+date: '2022-04-27'
+output: pdf_document
+---
+```{R}
+File1 <- read.csv("C:/Users/heere/OneDrive/Desktop/ASSIGNMENT 1 FML/Universities List - 1 (1).csv")
+File1
+
+#the choosen data is presented above
+#the table shows the shape_area from the table.
+
+mean(File1$Shape__Area)
+
+
+
+sd(File1$Shape__Area)
+
+
+
+#the above value show descriptive statistics
+#for a selection of quantiative variable
+
+
+
+
+
+table(File1$Shape__Length)
+
+
+str(File1)
+
+#the above values represent categorical descriptive analysis of the variable.
+
+File1$Shape__Area <- (File1$Shape__Area - mean(File1$Shape__Area)/sd(File1$Shape__Area))
+File1$Shape__Area
+
+#data transformation completed
+hist(File1$Shape__Length)
+
+
+
+#above is the histogram of data
+#selected variable to plot is shape length
+
+
+a <- File1$PARCEL_ID
+b <- File1$Shape__Area
+
+plot(a,b, main = "PARCEL_ID and Shape_Area of given universities" , xlab = "PARCEL_ID " ,ylab = "Shape_Area")
+
+
+#the above graph is scatterplot
+#the selected variables are parcel id and shape area of universities.
+```
